@@ -1,0 +1,56 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+body{
+    font-family: "sriracha", sans-serif;
+    background-color: rgb(176, 176, 176);
+}
+.friends{
+    /* Arkadaşlar simgesi */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 24px; 
+    transform: translateY(-50%);
+    z-index: 1100;
+}
+
+/* Friends icon */
+.friends-icon{
+    width: 44px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 300ms ease, box-shadow 200ms ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Offcanvas açıldığında ikonun sağa kaydırılması */
+.offcanvas.show + .friends .friends-icon{
+    transform: translateX(260px) translateY(-50%); /* Offcanvas genişliği kadar kaydır */
+}
+
+
+.offcanvas.offcanvas-start p{
+    color: black;
+}
+
+.login-body{
+    background-color: rgb(176, 176, 176);
+}
+#login-card{
+    /* style="    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
